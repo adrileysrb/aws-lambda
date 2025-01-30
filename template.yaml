@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  MyLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: org.acme.LambdaHandler::handleRequest
+      Runtime: java21
+      CodeUri: target/aws-lambda-1.0.0-SNAPSHOT.jar
+      MemorySize: 512
+      Timeout: 10
